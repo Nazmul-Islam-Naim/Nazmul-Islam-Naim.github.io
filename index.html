@@ -293,6 +293,90 @@
     font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem;
   }
 
+
+  /* ── CV DOWNLOAD BUTTON ── */
+  .nav-cv-btn {
+    display: flex; align-items: center; gap: 0.4rem;
+    background: var(--gold); color: var(--navy);
+    padding: 8px 18px; border-radius: 2px;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em;
+    text-decoration: none; transition: background 0.25s, transform 0.2s;
+    flex-shrink: 0;
+  }
+  .nav-cv-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* ── ACTIVE NAV LINK ── */
+  .nav-links a.active { color: var(--gold); }
+
+  /* ── DOWNLOAD BTN IN HERO ── */
+  .btn-download {
+    display: flex; align-items: center; gap: 0.4rem;
+    border: 2px solid var(--gold); color: var(--gold);
+    padding: 12px 28px; border-radius: 2px;
+    font-weight: 600; font-size: 0.9rem; letter-spacing: 0.04em;
+    text-decoration: none; transition: background 0.25s, transform 0.2s;
+  }
+  .btn-download:hover { background: rgba(201,168,76,0.12); transform: translateY(-2px); }
+
+  /* ── SOLID SPOTLIGHT ── */
+  :root { --solid-accent: #4fc3f7; }
+  .solid-block {
+    background: linear-gradient(135deg, rgba(13,27,42,0.9) 0%, rgba(36,59,85,0.6) 100%);
+    border: 1px solid var(--solid-accent);
+    border-radius: 6px; padding: 2.5rem;
+    margin-bottom: 3.5rem; position: relative; overflow: hidden;
+  }
+  .solid-block::before {
+    content: 'SOLID';
+    position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem; font-weight: 900; color: rgba(79,195,247,0.04);
+    line-height: 1; pointer-events: none; user-select: none;
+  }
+  .solid-badge {
+    display: inline-block; font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; color: var(--solid-accent);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    border: 1px solid var(--solid-accent); padding: 4px 12px;
+    border-radius: 2px; margin-bottom: 0.8rem;
+  }
+  .solid-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem;
+  }
+  .solid-sub { color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; max-width: 600px; margin-bottom: 1.8rem; }
+  .solid-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+  .solid-card {
+    background: rgba(79,195,247,0.06); border: 1px solid rgba(79,195,247,0.2);
+    border-radius: 4px; padding: 1.2rem 1rem;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  }
+  .solid-card:hover { background: rgba(79,195,247,0.12); border-color: var(--solid-accent); transform: translateY(-3px); }
+  .solid-letter { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--solid-accent); line-height: 1; margin-bottom: 0.4rem; }
+  .solid-name { font-size: 0.8rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
+  .solid-desc { font-size: 0.74rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── SPECIAL PILLS ── */
+  .pill-rabbit {
+    background: rgba(255,111,0,0.12) !important;
+    border-color: rgba(255,111,0,0.4) !important;
+    color: #ffb74d !important;
+  }
+  .pill-sonali {
+    background: rgba(0,188,212,0.1) !important;
+    border-color: rgba(0,188,212,0.35) !important;
+    color: #4dd0e1 !important;
+  }
+  .pill-solid {
+    background: rgba(79,195,247,0.1) !important;
+    border-color: rgba(79,195,247,0.4) !important;
+    color: var(--solid-accent) !important;
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) { .solid-grid { grid-template-columns: repeat(3,1fr); } }
+  @media (max-width: 600px) { .solid-grid { grid-template-columns: 1fr 1fr; } .nav-cv-btn { font-size: 0.72rem; padding: 7px 11px; } }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -322,6 +406,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">N.I. Naim</div>
+  <a href="/docs/Resume_Nazmul_Islam_Naim.pdf" download class="nav-cv-btn">↓ Download CV</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -495,6 +580,42 @@
     <h2>Technical Skills</h2>
     <div class="section-divider"></div>
   </div>
+
+  <div class="solid-block reveal">
+    <div>
+      <span class="solid-badge">★ Core Philosophy</span>
+      <div class="solid-title">SOLID Principles</div>
+      <p class="solid-sub">Writing clean, scalable, and maintainable software is not optional — it's a discipline. Every system I build is anchored in SOLID design to ensure long-term quality and team productivity.</p>
+    </div>
+    <div class="solid-grid">
+      <div class="solid-card">
+        <div class="solid-letter">S</div>
+        <div class="solid-name">Single Responsibility</div>
+        <div class="solid-desc">One class, one reason to change</div>
+      </div>
+      <div class="solid-card">
+        <div class="solid-letter">O</div>
+        <div class="solid-name">Open / Closed</div>
+        <div class="solid-desc">Open for extension, closed for modification</div>
+      </div>
+      <div class="solid-card">
+        <div class="solid-letter">L</div>
+        <div class="solid-name">Liskov Substitution</div>
+        <div class="solid-desc">Subtypes must be substitutable for base types</div>
+      </div>
+      <div class="solid-card">
+        <div class="solid-letter">I</div>
+        <div class="solid-name">Interface Segregation</div>
+        <div class="solid-desc">No client should depend on unused methods</div>
+      </div>
+      <div class="solid-card">
+        <div class="solid-letter">D</div>
+        <div class="solid-name">Dependency Inversion</div>
+        <div class="solid-desc">Depend on abstractions, not concretions</div>
+      </div>
+    </div>
+  </div>
+
   <div class="skills-grid">
     <div class="skill-group reveal">
       <div class="skill-group-title">// Languages & Frameworks</div>
@@ -524,11 +645,11 @@
       </div>
     </div>
     <div class="skill-group reveal">
-      <div class="skill-group-title">// DevOps & Infrastructure</div>
+      <div class="skill-group-title">// Messaging & DevOps</div>
       <div class="skill-tags">
+        <span class="skill-tag pill-rabbit">RabbitMQ</span>
         <span class="skill-tag">Docker</span>
         <span class="skill-tag">Jenkins</span>
-        <span class="skill-tag">AWS</span>
         <span class="skill-tag">cPanel</span>
         <span class="skill-tag">WHM Panel</span>
         <span class="skill-tag">Linux (Ubuntu)</span>
@@ -542,7 +663,7 @@
         <span class="skill-tag">Guzzle</span>
         <span class="skill-tag">SSO (KeyCloak)</span>
         <span class="skill-tag">SSL / NID</span>
-        <span class="skill-tag">SSLCommerz</span>
+        <span class="skill-tag pill-sonali">SonaliPayment</span>
         <span class="skill-tag">SMS & Email</span>
       </div>
     </div>
@@ -551,7 +672,7 @@
       <div class="skill-tags">
         <span class="skill-tag">MVC Pattern</span>
         <span class="skill-tag">OOP</span>
-        <span class="skill-tag">SOLID</span>
+        <span class="skill-tag pill-solid">SOLID</span>
         <span class="skill-tag">Agile</span>
         <span class="skill-tag">DB Design</span>
         <span class="skill-tag">Code Optimization</span>
@@ -631,15 +752,38 @@
 <script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
         setTimeout(() => e.target.classList.add('visible'), i * 80);
-        observer.unobserve(e.target);
+        revealObserver.unobserve(e.target);
       }
     });
   }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
+  reveals.forEach(el => revealObserver.observe(el));
+
+  // SPA-style active nav on scroll
+  const sections = document.querySelectorAll('section[id], #hero');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const activeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => activeObserver.observe(s));
+
+  // Smooth scroll for nav links
+  navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 </script>
 </body>
 </html>
