@@ -228,10 +228,10 @@
   }
 
   /* ── SKILLS ── */
-  #skills { background: var(--navy-mid); }
+  #skills { background: var(--navy); }
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
   .skill-group {
-    background: var(--navy); border: 1px solid var(--border);
+    background: var(--navy-mid); border: 1px solid var(--border);
     border-radius: 4px; padding: 1.8rem;
     transition: border-color 0.25s;
   }
@@ -251,10 +251,10 @@
   .skill-tag:hover { background: rgba(201,168,76,0.15); border-color: var(--gold); }
 
   /* ── EDUCATION ── */
-  #education { background: var(--navy); }
+  #education { background: var(--navy-mid); }
   .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
   .edu-card {
-    background: var(--navy-mid); border: 1px solid var(--border);
+    background: var(--navy); border: 1px solid var(--border);
     border-radius: 4px; padding: 2rem;
     transition: border-color 0.25s;
   }
@@ -270,10 +270,10 @@
   }
 
   /* ── AWARDS ── */
-  #awards { background: var(--navy-mid); }
+  #awards { background: var(--navy); }
   .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
   .award-card {
-    background: var(--navy); border: 1px solid var(--border);
+    background: var(--navy-mid); border: 1px solid var(--border);
     border-radius: 4px; padding: 2rem; text-align: center;
     transition: border-color 0.25s, transform 0.25s;
   }
@@ -281,6 +281,39 @@
   .award-icon { font-size: 2.5rem; margin-bottom: 1rem; }
   .award-title { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
   .award-org { color: var(--text-muted); font-size: 0.85rem; }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--navy-mid); }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+  .project-card {
+    background: var(--navy); border: 1px solid var(--border);
+    border-radius: 4px; padding: 1.8rem 2rem;
+    display: flex; flex-direction: column;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .project-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .project-type {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .project-name { font-size: 1.15rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+  .project-desc { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 1rem; }
+  .project-code {
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    background: rgba(0,0,0,0.25); border: 1px solid var(--border);
+    color: var(--gold-light); padding: 8px 12px; border-radius: 2px;
+    margin: -0.5rem 0 1.5rem; overflow-wrap: anywhere;
+  }
+  .project-card .exp-tech { margin-bottom: 1.5rem; }
+  .project-link {
+    margin-top: auto; align-self: flex-start;
+    border: 1px solid var(--gold); color: var(--gold);
+    padding: 9px 20px; border-radius: 2px;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em;
+    text-decoration: none; transition: background 0.25s, transform 0.2s;
+  }
+  .project-link:hover { background: rgba(201,168,76,0.12); transform: translateY(-2px); }
 
   /* ── FOOTER ── */
   footer {
@@ -406,10 +439,11 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">N.I. Naim</div>
-  <a href="/docs/Resume_Nazmul_Islam_Naim.pdf" download class="nav-cv-btn">↓ Download CV</a>
+  <a href="/docs/Resume-Nazmul_Islam_Naim.pdf" download class="nav-cv-btn">↓ Download CV</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#awards">Awards</a></li>
@@ -421,11 +455,11 @@
   <div class="hero-text">
     <div class="hero-tag">Software Engineer</div>
     <h1>Nazmul<br>Islam <span>Naim</span></h1>
-    <p class="hero-sub">PHP & Laravel Backend Specialist with 4+ years building scalable enterprise systems, government platforms, and high-performance REST APIs handling millions of records.</p>
+    <p class="hero-sub">PHP & Laravel Backend Specialist with 6+ years in tech, building scalable enterprise systems, government platforms, and high-performance REST APIs handling millions of records, and shipping faster with AI coding agents.</p>
     <div class="hero-stats">
       <div>
-        <div class="stat-num">4+</div>
-        <div class="stat-label">Years Experience</div>
+        <div class="stat-num">6+</div>
+        <div class="stat-label">Years in Tech</div>
       </div>
       <div>
         <div class="stat-num">5M+</div>
@@ -458,9 +492,10 @@
   </div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>I'm a Software Engineer with 4+ years of experience specializing in PHP and Laravel backend development. My expertise lies in architecting REST APIs, designing scalable database schemas, and building enterprise-grade government and financial systems.</p>
+      <p>I'm a Software Engineer with 4+ years of software engineering experience and 2+ years in technical instruction (6+ years in tech overall), specializing in PHP and Laravel backend development. My expertise lies in architecting REST APIs, designing scalable database schemas, and building enterprise-grade government and financial systems.</p>
       <p>I've built and maintained high-availability platforms processing millions of records, consistently improving performance through Redis caching, query optimization, and clean architectural patterns like MVC, OOP, and SOLID principles.</p>
       <p>I thrive in cross-functional environments, collaborating with ML engineers, QA specialists, and design teams to deliver end-to-end solutions — from development all the way to production deployment.</p>
+      <p>I use AI coding agents like Claude Code and OpenCode every day for faster delivery, debugging, and refactoring, and I build open-source tools around them: a VS Code extension, a Claude Code plugin, and a Laravel request analytics package.</p>
     </div>
     <div class="about-contacts reveal">
       <div class="contact-row">
@@ -510,6 +545,7 @@
           <li>Owned and delivered core modules end-to-end from development to deployment</li>
           <li>Collaborated cross-functionally with ML, QA, Design & Operations teams</li>
           <li>Managed and optimized secure communication between various API servers</li>
+          <li>Leveraged AI coding agents (Claude Code, OpenCode) to accelerate development, debugging & refactoring</li>
         </ul>
         <div class="exp-tech">
           <span class="tech-pill">Laravel</span>
@@ -519,7 +555,10 @@
           <span class="tech-pill">Redis</span>
           <span class="tech-pill">OpenTelemetry</span>
           <span class="tech-pill">SSO (KeyCloak)</span>
+          <span class="tech-pill">Oracle Form 6i</span>
           <span class="tech-pill">Oracle 10g</span>
+          <span class="tech-pill">Claude Code</span>
+          <span class="tech-pill">OpenCode</span>
         </div>
         <div style="margin-top:0.8rem; font-size:0.8rem; color:var(--text-muted)">
           Projects: SLSD (MOHPW), BIDA-V2 (BIDA), D2K (ERP), GAIN
@@ -568,6 +607,76 @@
           <li>Recognized with the Best Teacher Award</li>
         </ul>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-tag">// things i've built</span>
+    <h2>Open Source & Tools</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card reveal">
+      <div class="project-type">VS Code Extension</div>
+      <div class="project-name">Nin Claude Dashboard</div>
+      <p class="project-desc">See your Claude Code sessions and requirement status per project, right inside VS Code.</p>
+      <ul class="exp-list">
+        <li>Live feed of Claude Code sessions per project</li>
+        <li>Requirement status from spec maps or Google Sheets</li>
+        <li>Start and stop Laravel, Django, FastAPI and npm servers on fixed ports</li>
+        <li>Turn Claude plugins on or off per project</li>
+      </ul>
+      <div class="exp-tech">
+        <span class="tech-pill">VS Code API</span>
+        <span class="tech-pill">Claude Code</span>
+        <span class="tech-pill">Google Sheets API</span>
+      </div>
+      <a href="https://marketplace.visualstudio.com/items?itemName=NazmulIslamNaim.nin-claude-dashboard" target="_blank" rel="noopener" class="project-link">View on Marketplace ↗</a>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-type">Claude Code Plugin</div>
+      <div class="project-name">nin-plugin</div>
+      <p class="project-desc">Turns a requirement into a spec, then designs, builds and reviews it with about 30 skills.</p>
+      <ul class="exp-list">
+        <li>Design flow: business-fit direction, tokens, screens and review</li>
+        <li>Laravel, FastAPI and React Native skills with layered architecture</li>
+        <li>Parallel frontend, backend and mobile builds from one API contract</li>
+        <li>GitHub issue queue: agents build in worktrees, review and open PRs</li>
+      </ul>
+      <div class="exp-tech">
+        <span class="tech-pill">Claude Code</span>
+        <span class="tech-pill">Laravel</span>
+        <span class="tech-pill">FastAPI</span>
+        <span class="tech-pill">Next.js</span>
+        <span class="tech-pill">React Native</span>
+      </div>
+      <a href="https://github.com/Nazmul-Islam-Naim/nin-plugin" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-type">Laravel Package</div>
+      <div class="project-name">Request Log Analyzer</div>
+      <p class="project-desc">Logs and analyzes HTTP requests with an interactive dashboard for queries, errors and performance.</p>
+      <ul class="exp-list">
+        <li>Slow request tracking, route analytics and API insights</li>
+        <li>Geo analytics, active users, login history and request replay</li>
+        <li>CSV / Excel export and alerts via log, email or Discord</li>
+        <li>Sensitive data masking and async logging via queues</li>
+      </ul>
+      <div class="exp-tech">
+        <span class="tech-pill">PHP 8.1+</span>
+        <span class="tech-pill">Laravel 10–13</span>
+        <span class="tech-pill">Redis</span>
+        <span class="tech-pill">MIT</span>
+      </div>
+      <div class="project-code">composer require nintis/request-log-analyzer</div>
+      <a href="https://packagist.org/packages/nintis/request-log-analyzer" target="_blank" rel="noopener" class="project-link">View on Packagist ↗</a>
     </div>
 
   </div>
@@ -627,6 +736,7 @@
         <span class="skill-tag">JavaScript</span>
         <span class="skill-tag">jQuery</span>
         <span class="skill-tag">Ajax</span>
+        <span class="skill-tag">React</span>
         <span class="skill-tag">Next.js</span>
         <span class="skill-tag">Yii</span>
       </div>
@@ -635,6 +745,7 @@
       <div class="skill-group-title">// Database & Caching</div>
       <div class="skill-tags">
         <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">PostgreSQL</span>
         <span class="skill-tag">Oracle 10g</span>
         <span class="skill-tag">PL/SQL</span>
         <span class="skill-tag">Triggers</span>
@@ -659,11 +770,15 @@
       <div class="skill-group-title">// API & Integrations</div>
       <div class="skill-tags">
         <span class="skill-tag">REST API</span>
+        <span class="skill-tag">GraphQL</span>
+        <span class="skill-tag">Postman</span>
+        <span class="skill-tag">Insomnia</span>
         <span class="skill-tag">Curl</span>
         <span class="skill-tag">Guzzle</span>
         <span class="skill-tag">SSO (KeyCloak)</span>
         <span class="skill-tag">SSL / NID</span>
         <span class="skill-tag pill-sonali">SonaliPayment</span>
+        <span class="skill-tag">SSLCommerz</span>
         <span class="skill-tag">SMS & Email</span>
       </div>
     </div>
@@ -677,6 +792,17 @@
         <span class="skill-tag">DB Design</span>
         <span class="skill-tag">Code Optimization</span>
         <span class="skill-tag">Documentation</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-title">// AI-Assisted Development</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Claude Code</span>
+        <span class="skill-tag">OpenCode</span>
+        <span class="skill-tag">AI Code Review</span>
+        <span class="skill-tag">AI Refactoring</span>
+        <span class="skill-tag">Claude Code Plugins</span>
+        <span class="skill-tag">VS Code Extensions</span>
       </div>
     </div>
     <div class="skill-group reveal">
@@ -744,7 +870,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-name">Nazmul Islam Naim</div>
-  <p>Software Engineer · PHP & Laravel Specialist · Dhaka, Bangladesh</p>
+  <p>Software Engineer · PHP & Laravel Specialist · Open Source Builder · Dhaka, Bangladesh</p>
   <p style="margin-top:0.5rem">nazmulislam.bdb@gmail.com · 01756-732928</p>
   <p style="margin-top:1.5rem; font-size:0.75rem; opacity:0.5">© 2026 Nazmul Islam Naim. All rights reserved.</p>
 </footer>
